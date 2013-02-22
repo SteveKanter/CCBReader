@@ -30,8 +30,7 @@
 @synthesize name;
 @synthesize sequenceId;
 @synthesize chainedSequenceId;
-@synthesize callbackChannel;
-@synthesize soundChannel;
+
 
 - (id) init
 {

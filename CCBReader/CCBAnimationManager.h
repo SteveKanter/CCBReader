@@ -45,8 +45,6 @@
     int autoPlaySequenceId;
     
     CCNode* rootNode;
-    id owner;
-    BOOL jsControlled;
     CGSize rootContainerSize;
     
     NSObject<CCBAnimationManagerDelegate>* delegate;
@@ -65,8 +63,6 @@
 @property (nonatomic,readonly) NSMutableArray* sequences;
 @property (nonatomic,assign) int autoPlaySequenceId;
 @property (nonatomic,assign) CCNode* rootNode;
-@property (nonatomic,assign) id owner;
-@property (nonatomic,assign) BOOL jsControlled;
 @property (nonatomic,assign) CGSize rootContainerSize;
 @property (nonatomic,retain) NSObject<CCBAnimationManagerDelegate>* delegate;
 @property (nonatomic,readonly) NSString* runningSequenceName;
@@ -114,17 +110,6 @@
 }
 +(id) actionWithDuration:(ccTime)duration angle:(float)angle;
 -(id) initWithDuration:(ccTime)duration angle:(float)angle;
-@end
-
-@interface CCBSoundEffect : CCActionInstant
-{
-    NSString* soundFile;
-    float pitch;
-    float pan;
-    float gain;
-}
-+(id) actionWithSoundFile:(NSString*)file pitch:(float)pitch pan:(float) pan gain:(float)gain;
--(id) initWithSoundFile:(NSString*)file pitch:(float)pitch pan:(float) pan gain:(float)gain;
 @end
 
 //
